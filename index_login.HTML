@@ -1,0 +1,126 @@
+<html>
+
+    <head>
+        <title>Form Contato</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{margin: 0; padding: 0; box-sizing: border-box; }
+
+        body{
+
+            background-color: #DC56C6;
+        }
+
+        form{
+
+            background-color: white;
+            max-width: 500px;
+            width: 70%;
+            padding: 20px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+
+        }
+
+        form h3{
+
+            text-align: center;
+            color: #DC56C6;
+            font-family: 'Lato', sans-serif;
+
+        }
+
+        form input[type=text],
+        form input[type=password]{
+
+            width: 100%;
+            height: 45px;
+            border: 1px solid #ccc;
+            padding-left: 10px;
+            margin: 10px 0;
+
+        }
+
+        form input[type=submit]{
+
+            width: 100%;
+            height: 40px;
+            cursor: pointer;
+            background-color: #DC56C6;
+            color: white;
+            border: 0;
+            border-radius: 20px;
+            transition: 1s;
+
+        }
+
+        form input[type=submit]:hover{
+
+            background-color: #b444a2;
+
+        }
+
+        form input[type=text]:focus{
+
+            outline: 0;
+
+        }
+
+        form input[type=password]:focus{
+
+            outline: 0;
+
+}
+
+
+    </style>
+
+    <body>
+
+        <form>
+
+            <h3>Entrar em contato</h3>
+            <imput id="email" type="text" name="email" placeholder="Seu e-mail..."/>
+            <imput id="password" type="password" name="senha" placeholder="Sua senha..."/>
+            <imput type="submit" name="acao" value="Enviar"/>
+
+            </form>
+
+            <script>
+
+                var password = document.getElementById('password');
+                var email = document.getElementById('email');
+
+                email.addEventListener('focus',()=>{
+
+                    email.style.borderColor = "#b444a2";
+
+                })
+
+                email.addEventListener('blur',()=>{
+
+                    email.style.borderColor = "#ccc";
+
+                })
+
+                password.addEventListener('focus',()=>{
+
+                    password.style.borderColor = "#b444a2";
+
+                })
+
+                password.addEventListener('blur',()=>{
+
+                    password.style.borderColor = "#ccc";
+
+                })
+
+            </script>
+    </body>
+</html>
